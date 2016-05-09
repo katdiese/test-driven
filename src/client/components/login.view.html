@@ -1,0 +1,28 @@
+<div class="login">
+  <div class="container">
+    <h1>Welcome to Test Driven.</h1>
+    <h3>Flashcards work best. -Albert Einstein</h3>
+    <div ng-show=showLogin class="four offset-by-four columns">
+      <form>
+          <h2>Login</h2>
+          <label for="username">Username</label>
+          <input class="u-full-width" type="text" ng-model="user.username">
+          <label for="password">Password</label>
+          <input class="u-full-width" type="text" ng-model="user.password">
+          <button type="submit">Login</button>
+      </form>
+      <p>New around here? <a ng-click="toggleLogin()">Register here</a>.</p>
+    </div>
+    <div ng-show=!showLogin class="four offset-by-four columns">
+      <form>
+          <h2>Register</h2>
+          <label for="username">Username</label>
+          <input class="u-full-width" type="text" ng-model="user.username">
+          <label for="password">Password</label>
+          <input class="u-full-width" type="text" ng-model="user.password">
+          <button type="submit">Register</button>
+      </form>
+      <p>Been here before? <a ng-click="toggleLogin()">Login here</a>.</p>
+    </div>
+  </div>
+</div>

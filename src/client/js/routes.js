@@ -12,7 +12,7 @@
   function appConfig($routeProvider, $httpProvider) {
     $routeProvider
     .when('/', {
-      template: '<h1>Hello!!!!</h1>'
+      template: '<login></login>'
     })
   }
 
