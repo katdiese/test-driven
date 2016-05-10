@@ -6,9 +6,9 @@
     .module('studyApp')
     .service('apiService', apiService);
 
-  apiService.$inject = ['$http'];
+  apiService.$inject = ['$http', 'crudService'];
 
-  function apiService($http) {
+  function apiService($http, crudService) {
 
   }
 
