@@ -13,7 +13,19 @@ function Points() {
 }
 
 module.exports = {
-  getDecks: function() {
-    return Decks().select();
+  getDecksPerUser: function(id) {
+    return Decks().where('user_id', id);
+  },
+  getDeckCards: function(deckId) {
+    return Cards().where('deck_id', deckId);
+  },
+  addNewDeck: function(id, post) {
+    return Decks().insert('user_id', id).insert(post);
+  },
+  addCard: function(deckId, post) {
+    return Cards().insert('deck_id', deckId).insert(post);
+  },
+  getUserScores: function(id) {
+    return Points().where('user_id', id);
   }
 }
